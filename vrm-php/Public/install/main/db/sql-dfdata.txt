@@ -1,0 +1,38 @@
+TRUNCATE TABLE  `###_sysconfig`;
+INSERT INTO `###_sysconfig` (`id`,`varname`,`info`,`groupid`,`type`,`value`) VALUES('1','web_name','站点名称','1','string','全景通');
+INSERT INTO `###_sysconfig` (`id`,`varname`,`info`,`groupid`,`type`,`value`) VALUES('2','upload_type_all','上传全部类型限制（多个请用 | 隔开）','2','string','jpg|jpeg|gif|png|bmp|mp3|wma|flv|swf|mp4|m4v|zip');
+INSERT INTO `###_sysconfig` (`id`,`varname`,`info`,`groupid`,`type`,`value`) VALUES('3','upload_type_image','上传图片类型限制（多个请用 | 隔开）','2','string','jpg|jpeg|gif|png');
+INSERT INTO `###_sysconfig` (`id`,`varname`,`info`,`groupid`,`type`,`value`) VALUES('4','upload_type_audio','上传音频类型限制（多个请用 | 隔开）','2','string','mp3|wma');
+INSERT INTO `###_sysconfig` (`id`,`varname`,`info`,`groupid`,`type`,`value`) VALUES('5','upload_type_video','上传视频类型限制（多个请用 | 隔开）','2','string','wma|flv|swf|mp4|m4v');
+INSERT INTO `###_sysconfig` (`id`,`varname`,`info`,`groupid`,`type`,`value`) VALUES('7','upload_size','上传大小限制（MB）','2','string','20');
+
+TRUNCATE TABLE  `###_admin_group`;
+INSERT INTO `###_admin_group` (`id`,`groupname`,`grouppower`,`creat_time`,`updata_time`,`groupinfo`) VALUES('10','超级管理员','All_power','1397445943','1397446711','所有权限');
+
+TRUNCATE TABLE  `###_cursor`;
+INSERT INTO `###_cursor` (`id`,`member_id`,`type`,`mode`,`file`,`w`,`h`) VALUES('1','0','system','drag','cursor1','32','32');
+INSERT INTO `###_cursor` (`id`,`member_id`,`type`,`mode`,`file`,`w`,`h`) VALUES('2','0','system','4way','cursor2','28','28');
+INSERT INTO `###_cursor` (`id`,`member_id`,`type`,`mode`,`file`,`w`,`h`) VALUES('3','0','system','8way','cursor3','16','16');
+INSERT INTO `###_cursor` (`id`,`member_id`,`type`,`mode`,`file`,`w`,`h`) VALUES('4','0','system','8way','cursor4','16','16');
+
+TRUNCATE TABLE  `###_admin_group`;
+INSERT INTO `###_admin_group` (`id`,`groupname`,`grouppower`,`creat_time`,`updata_time`,`groupinfo`) VALUES('10','超级管理员','All_power','1397445943','1397446711','所有权限');
+
+TRUNCATE TABLE  `###_background`;
+INSERT INTO `###_background` (`id`,`member_id`,`bgimg`) VALUES('1','1','5.jpg');
+
+TRUNCATE TABLE  `###_spot`;
+INSERT INTO `###_spot` (`id`,`member_id`,`mode`,`type`,`title`,`file`,`width`,`height`,`len`,`speed`) VALUES('1','0','system','spot','前','/Public/material/system/spot/spot1.png','60','40','0','5');
+INSERT INTO `###_spot` (`id`,`member_id`,`mode`,`type`,`title`,`file`,`width`,`height`,`len`,`speed`) VALUES('2','0','system','spot','左','/Public/material/system/spot/spot2.png','60','40','0','5');
+INSERT INTO `###_spot` (`id`,`member_id`,`mode`,`type`,`title`,`file`,`width`,`height`,`len`,`speed`) VALUES('3','0','system','spot','右','/Public/material/system/spot/spot3.png','60','40','0','5');
+INSERT INTO `###_spot` (`id`,`member_id`,`mode`,`type`,`title`,`file`,`width`,`height`,`len`,`speed`) VALUES('4','0','system','spot','标记（绿）','/Public/material/system/spot/spot4.png','33','50','0','5');
+INSERT INTO `###_spot` (`id`,`member_id`,`mode`,`type`,`title`,`file`,`width`,`height`,`len`,`speed`) VALUES('5','0','system','spot','标记（蓝）','/Public/material/system/spot/spot5.png','33','50','0','5');
+INSERT INTO `###_spot` (`id`,`member_id`,`mode`,`type`,`title`,`file`,`width`,`height`,`len`,`speed`) VALUES('6','1','self','spot','感叹号','/Public/material/self/spot/1/139864972418FC.png','48','48','0','5');
+INSERT INTO `###_spot` (`id`,`member_id`,`mode`,`type`,`title`,`file`,`width`,`height`,`len`,`speed`) VALUES('7','1','self','spot','左箭头','/Public/material/self/spot/1/13985244056022.png','24','20','0','5');
+INSERT INTO `###_spot` (`id`,`member_id`,`mode`,`type`,`title`,`file`,`width`,`height`,`len`,`speed`) VALUES('8','1','self','spot','右箭头','/Public/material/self/spot/1/13985244219FA3.png','24','20','0','5');
+INSERT INTO `###_spot` (`id`,`member_id`,`mode`,`type`,`title`,`file`,`width`,`height`,`len`,`speed`) VALUES('9','1','self','spot','蜗牛','/Public/material/self/spot/1/1398524576FE85.png','55','32','0','5');
+INSERT INTO `###_spot` (`id`,`member_id`,`mode`,`type`,`title`,`file`,`width`,`height`,`len`,`speed`) VALUES('10','0','system','movespot','金色箭头','/Public/material/system/movespot/1.png','50','50','100','10');
+INSERT INTO `###_spot` (`id`,`member_id`,`mode`,`type`,`title`,`file`,`width`,`height`,`len`,`speed`) VALUES('11','0','system','movespot','齿轮','/Public/material/self/movespot/1/2.png','40','40','50','30');
+
+TRUNCATE TABLE  `###_sysui`;
+INSERT INTO `###_sysui` (`id`,`title`,`devices`,`info`,`path`) VALUES('1','水晶玻璃风格类型','flash/手机','一个很不错的样式，适合多种平台的用法。','ui_001');

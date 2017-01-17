@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>全景通-安装程序</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=100"/>
+        <link href="__PUBLIC__/install/style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div id="toper"></div><input type="file"  >
+        <div id="main">
+            <div class="printer">
+                <div class="printer_title">服务器讯息</div>
+                <div class="printer_body">
+                    <table width="860" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td width="30%"><strong>服务器域名</strong></td>
+                            <td width="70%">{$sp_name}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>服务器操作系统</strong></td>
+                            <td>{$sp_os}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>服务器解译引擎</strong></td>
+                            <td>{$sp_server}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>PHP版本</strong></td>
+                            <td>{$phpv}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>系统安装目录</strong></td>
+                            <td>{$root}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="printer_title">系统环境检测</div>
+                <div class="printer_body">
+                    <table width="860" border="0" align="center" cellpadding="0" cellspacing="0" class="twbox">
+                        <tr>
+                            <th width="200" align="left"><strong>需开启的变量或函数</strong></th>
+                            <th width="300"><strong>要求</strong></th>
+                            <th width="380"><strong>实际状态及建议</strong></th>
+                        </tr>
+                        <tr>
+                            <td>safe_mode</td>
+                            <td align="center">Off</td>
+                            <td>{$sp_safe_mode} <small>( 本系统不支持在非win主机的安全模式下运行 )</small></td>
+                        </tr>
+                        <tr>
+                            <td>GD 支持 </td>
+                            <td align="center">On</td>
+                            <td>{$sp_gd} <small>(不支持将导致与图片相关的大多数功能无法使用或引发警告)</small></td>
+                        </tr>
+                        <tr>
+                            <td>MySQL 支持</td>
+                            <td align="center">On</td>
+                            <td>{$sp_mysql} <small>(不支持无法使用本系统)</small></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="printer_title">系统环境检测</div>
+                <div class="printer_body">
+                    <table width="860" border="0" align="center" cellpadding="0" cellspacing="0" class="twbox">
+                        <tr>
+                            <th width="200" align="left"><strong>目录名</strong></th>
+                            <th width="200"><strong>读取权限</strong></th>
+                            <th width="200"><strong>写入权限</strong></th>
+                        </tr>
+                            <foreach name="sp_testdirs" item="d">
+                        <tr>
+                            <td>{$d}</td>
+                            <td align='center'>{:rsta($d)}</td><td align='center'>{:wsta($d)}</td>
+                        </tr>
+                            </foreach>
+                    </table>
+                </div>
+                <div class="submitbox">
+                    <input type="button" class="btn1" value="后退" onclick="window.location.href='{:U('install/index/index?step=1')}';" />
+                    <input type="button" class="btn1" value="继续" onclick="window.location.href='{:U('install/index/index?step=3')}';" />
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
